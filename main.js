@@ -30,10 +30,18 @@ function partiyCode() {
             var p4 = data[1] ^ data[2] ^ data[3];
             p = [p1, p2, data[0], p4, data[1], data[2], data[3]];
 
-            parRes.innerHTML = `<h6 class="display-6"> Parity bitleri p1: ${p1},  p2: ${p2},  p4: ${p4}</h6>
+            parRes.innerHTML = `
+            
+            <table class='table table-bordered text-white'>
+                <tr><td><u><b>p1</b></u></td><td><u><b>p2</b></u></td><td>p3</td><td><u><b>p4</b></u></td><td>p5</td><td>p6</td><td>p7</td></tr>
+                <tr><td class='text-danger'><u><b>?</b></u></td><td class='text-danger'><u><b>?</b></u></td><td>${data[0]}</td><td class='text-danger'><u><b>?</b></u></td><td>${data[1]}</td><td>${data[2]}</td><td>${data[3]}</td></tr></table>
+                <p style='font-size:25px;'>p1= p3 ⊕ p5 ⊕ p7 = ${p1} <br>
+                p2= p3 ⊕ p6 ⊕ p7 = ${p2} <br>
+                p4= p5 ⊕ p6 ⊕ p7 = ${p4} <br></p>
+            <h6 class="display-6"> Parity bitleri p1: ${p1},  p2: ${p2},  p4: ${p4}</h6>
              <table class='table table-bordered text-white'>
                 <tr><td><u><b>p1</b></u></td><td><u><b>p2</b></u></td><td>p3</td><td><u><b>p4</b></u></td><td>p5</td><td>p6</td><td>p7</td></tr>
-                <tr><td><u><b>${p1}</b></u></td><td><u><b>${p2}</b></u></td><td>${data[0]}</td><td><u><b>${p4}</b></u></td><td>${data[1]}</td><td>${data[2]}</td><td>${data[3]}</td></tr>
+                <tr><td class='text-danger'><u><b>${p1}</b></u></td><td class='text-danger'><u><b>${p2}</b></u></td><td>${data[0]}</td><td class='text-danger'><u><b>${p4}</b></u></td><td>${data[1]}</td><td>${data[2]}</td><td>${data[3]}</td></tr>
                 <tr><td><u><button class='btn btn-outline-danger btn-sm' onclick='check(4,0)'>x</button></td><td><button class='btn btn-outline-danger btn-sm' onclick='check(4,1)'>x</button></u></td><td><button class='btn btn-outline-danger btn-sm' onclick='check(4,2)'>x</button></td><td><u><button class='btn btn-outline-danger btn-sm' onclick='check(4,3)'>x</button></u></td><td><button class='btn btn-outline-danger btn-sm' onclick='check(4,4)'>x</button></td><td><button class='btn btn-outline-danger btn-sm' onclick='check(4,5)'>x</button></td><td><button class='btn btn-outline-danger btn-sm' onclick='check(4,6)'>x</button></td></tr>
              </table>`
             break;
@@ -46,10 +54,17 @@ function partiyCode() {
             var p8 = data[4] ^ data[5] ^ data[6] ^ data[7];
             p = [p1, p2, data[0], p4, data[1], data[2], data[3], p8, data[4], data[5], data[6], data[7]];
 
-            parRes.innerHTML = `<h6 class="display-6"> Parity bitleri p1: ${p1},  p2: ${p2},  p4: ${p4}</h6>
+            parRes.innerHTML = `<table class='table table-bordered text-white'>
+            <tr><td><u><b>p1</b></u></td><td><u><b>p2</b></u></td><td>p3</td><td><u><b>p4</b></u></td><td>p5</td><td>p6</td><td>p7</td><td><u><b>p8</b></u></td><td>p9</td><td>p10</td><td>p11</td><td>p12</td></tr>
+            <tr><td class='text-danger'><u><b>?</b></u></td><td class='text-danger'><u><b>?</b></u></td><td>${data[0]}</td><td class='text-danger'><u><b>?</b></u></td><td>${data[1]}</td><td>${data[2]}</td><td>${data[3]}</td><td class='text-danger'><u><b>?</b></u></td><td>${data[4]}</td><td>${data[5]}</td><td>${data[6]}</td><td>${data[7]}</td></tr></table>
+            <p style='font-size:25px;'>p1= p3 ⊕ p5 ⊕ p7 ⊕ p9 ⊕ p11 = ${p1} <br>
+                p2= p3 ⊕ p6 ⊕ p7 ⊕ p10 ⊕ p11 = ${p2} <br>
+                p4= p5 ⊕ p6 ⊕ p7 ⊕ p12 = ${p4} <br>
+                p8= p9 ⊕ p10 ⊕ p11 ⊕ p12= ${p8} <br></p>
+            <h6 class="display-6"> Parity bitleri p1: ${p1},  p2: ${p2},  p4: ${p4}</h6>
                  <table class='table table-bordered text-white'>
                     <tr><td><u><b>p1</b></u></td><td><u><b>p2</b></u></td><td>p3</td><td><u><b>p4</b></u></td><td>p5</td><td>p6</td><td>p7</td><td><u><b>p8</b></u></td><td>p9</td><td>p10</td><td>p11</td><td>p12</td></tr>
-                    <tr><td><u><b>${p1}</b></u></td><td><u><b>${p2}</b></u></td><td>${data[0]}</td><td><u><b>${p4}</b></u></td><td>${data[1]}</td><td>${data[2]}</td><td>${data[3]}</td><td><u><b>${p8}</b></u></td><td>${data[4]}</td><td>${data[5]}</td><td>${data[6]}</td><td>${data[7]}</td></tr>
+                    <tr><td class='text-danger'><u><b>${p1}</b></u></td><td class='text-danger'><u><b>${p2}</b></u></td><td>${data[0]}</td><td class='text-danger'><u><b>${p4}</b></u></td><td>${data[1]}</td><td>${data[2]}</td><td>${data[3]}</td><td class='text-danger'><u><b>${p8}</b></u></td><td>${data[4]}</td><td>${data[5]}</td><td>${data[6]}</td><td>${data[7]}</td></tr>
                     <tr><td><u><button class='btn btn-outline-danger btn-sm' onclick='check(8,0)'>x</button></td><td><button class='btn btn-outline-danger btn-sm' onclick='check(8,1)'>x</button></u></td><td><button class='btn btn-outline-danger btn-sm' onclick='check(8,2)'>x</button></td><td><u><button class='btn btn-outline-danger btn-sm' onclick='check(8,3)'>x</button></u></td><td><button class='btn btn-outline-danger btn-sm' onclick='check(8,4)'>x</button></td><td><button class='btn btn-outline-danger btn-sm' onclick='check(8,5)'>x</button></td><td><button class='btn btn-outline-danger btn-sm' onclick='check(8,6)'>x</button></td><td><button class='btn btn-outline-danger btn-sm' onclick='check(8,7)'>x</button></td><td><button class='btn btn-outline-danger btn-sm' onclick='check(8,8)'>x</button></td><td><button class='btn btn-outline-danger btn-sm' onclick='check(8,9)'>x</button></td><td><button class='btn btn-outline-danger btn-sm' onclick='check(8,10)'>x</button></td><td><button class='btn btn-outline-danger btn-sm' onclick='check(8,11)'>x</button></td></tr>
                  </table>`
             break;
@@ -98,7 +113,11 @@ function check(bit, error) {
                 cheRes.innerHTML = `<hr><h6 class="display-6">p${error + 1} biti hatalandırılmıştır. Yeni verimiz: </h6>
                 <table class='table table-bordered text-white'>
                 <tr><td>p1</td><td>p2</td><td>p3</td><td>p4</td><td>p5</td><td>p6</td><td>p7</td></tr>
-                <tr><td>${pCheck[0]}</td><td>${pCheck[1]}</td><td>${pCheck[2]}</td><td>${pCheck[3]}</td><td>${pCheck[4]}</td><td>${pCheck[5]}</td><td>${pCheck[6]}</td></tr></table><p style='font-size:20px;'>Check bitleri c4: ${c4},  c2: ${c2},  c1: ${c1} - C: ${c4}${c2}${c1}  <br> Check bitlerinden hatanın p${c} bitinde olduğunu doğrulayabiliriz.</p>
+                <tr><td>${pCheck[0]}</td><td>${pCheck[1]}</td><td>${pCheck[2]}</td><td>${pCheck[3]}</td><td>${pCheck[4]}</td><td>${pCheck[5]}</td><td>${pCheck[6]}</td></tr></table><p style='font-size:25px;'>
+                c1 = p1 ⊕ p3 ⊕ p5 ⊕ p7 = ${c1} <br>
+                c2 = p2 ⊕ p3 ⊕ p6 ⊕ p7 = ${c2}<br>
+                c4 = p4 ⊕ p5 ⊕ p6 ⊕ p7 = ${c4}<br></p>
+                <h6 class="display-6">Check bitleri c4= ${c4},  c2= ${c2},  c1= ${c1} <br> C: ${c4}${c2}${c1}  <br> Check bitlerinden hatanın p${c} bitinde olduğunu doğrulayabiliriz.</h6>
                 `
             }
             break;
@@ -115,7 +134,11 @@ function check(bit, error) {
                 cheRes.innerHTML = `<hr><h6 class="display-6">p${error + 1} biti hatalandırılmıştır. Yeni verimiz: </h6>
                 <table class='table table-bordered text-white'>
                 <tr><td>p1</td><td>p2</td><td>p3</td><td>p4</td><td>p5</td><td>p6</td><td>p7</td><td>p8</td><td>p9</td><td>p10</td><td>p11</td><td>p12</td></tr>
-                <tr><td>${pCheck[0]}</td><td>${pCheck[1]}</td><td>${pCheck[2]}</td><td>${pCheck[3]}</td><td>${pCheck[4]}</td><td>${pCheck[5]}</td><td>${pCheck[6]}</td><td>${pCheck[7]}</td><td>${pCheck[8]}</td><td>${pCheck[9]}</td><td>${pCheck[10]}</td><td>${pCheck[11]}</td></tr></table><p style='font-size:20px;'>Check bitleri c8: ${c8} c4: ${c4},  c2: ${c2},  c1: ${c1} - C: ${c8}${c4}${c2}${c1}  <br> Check bitlerinden hatanın p${c} bitinde olduğunu doğrulayabiliriz.</p>
+                <tr><td>${pCheck[0]}</td><td>${pCheck[1]}</td><td>${pCheck[2]}</td><td>${pCheck[3]}</td><td>${pCheck[4]}</td><td>${pCheck[5]}</td><td>${pCheck[6]}</td><td>${pCheck[7]}</td><td>${pCheck[8]}</td><td>${pCheck[9]}</td><td>${pCheck[10]}</td><td>${pCheck[11]}</td></tr></table><p style='font-size:25px;'>
+                c1 = p1 ⊕ p3 ⊕ p5 ⊕ p7 ⊕ p9 ⊕ p11 = ${c1} <br>
+                c2 = p2 ⊕ p3 ⊕ p6 ⊕ p7 ⊕ p10 ⊕ p11 = ${c2}<br>
+                c4 = p4 ⊕ p5 ⊕ p6 ⊕ p7 ⊕ p12 = ${c4}<br>
+                c8= p8 ⊕ p9 ⊕ p10 ⊕ p11 ⊕ p12 = ${c8}<br></p><h6 class="display-6">Check bitleri c8= ${c8}, c4= ${c4},  c2= ${c2},  c1= ${c1} <br> C: ${c8}${c4}${c2}${c1}  <br> Check bitlerinden hatanın p${c} bitinde olduğunu doğrulayabiliriz.</h6>
                 `
             }
             break;
